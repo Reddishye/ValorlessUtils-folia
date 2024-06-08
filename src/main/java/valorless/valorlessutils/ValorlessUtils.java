@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.tcoded.folialib.FoliaLib;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -29,6 +30,8 @@ public final class ValorlessUtils extends JavaPlugin implements Listener {
     public static JavaPlugin thisPlugin;
     String Name = "§7[§6Valorless§bUtils§7]§r";
 	public static Server server = new Server();
+
+    public static FoliaLib foliaLib;
 	
 	public static class Server {
 		public String version = "null";
@@ -62,6 +65,8 @@ public final class ValorlessUtils extends JavaPlugin implements Listener {
     public void onLoad() {
         thisPlugin = this;
 		server.version = Bukkit.getBukkitVersion().split("-")[0];
+
+        foliaLib = new FoliaLib(this);
     }
 
     @Override
@@ -288,5 +293,9 @@ public final class ValorlessUtils extends JavaPlugin implements Listener {
             }
             return false;
         }
+    }
+
+    public static FoliaLib getFoliaLib() {
+        return foliaLib;
     }
 }

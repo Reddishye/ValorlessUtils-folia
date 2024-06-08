@@ -1,8 +1,9 @@
 name: ValorlessUtils
 main: valorless.valorlessutils.ValorlessUtils
-version: version-number
+version: ${version}
 author: Valorless
 api-version: 1.17
+folia-supported: true
 commands:
   valorlessutils:
     description: Main command.
