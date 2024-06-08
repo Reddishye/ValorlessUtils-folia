@@ -1,6 +1,6 @@
 name: ValorlessUtils
 main: valorless.valorlessutils.ValorlessUtils
-version: ${version}
+version: ${version}.${build}
 author: Valorless
 api-version: 1.17
 folia-supported: true
